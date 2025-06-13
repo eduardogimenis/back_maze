@@ -1,11 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://jb67nnu14mf2"]
 
-[ext_resource type="MeshLibrary" uid="uid://6cxe342qbruc" path="res://scenes/level/level_tiles.meshlib" id="1_5ld5e"]
 [ext_resource type="Script" uid="uid://c0r867a5fxfjs" path="res://scenes/level/level_generator.gd" id="1_8gbu3"]
+[ext_resource type="MeshLibrary" uid="uid://blcbhdqtin7dh" path="res://scenes/level/levelTiles/level_tiles.meshlib" id="2_8gbu3"]
 
 [node name="LevelGenerator" type="Node3D"]
 script = ExtResource("1_8gbu3")
 
 [node name="GridMap" type="GridMap" parent="."]
-mesh_library = ExtResource("1_5ld5e")
+mesh_library = ExtResource("2_8gbu3")
 cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+metadata/_editor_floor_ = Vector3(1, 0, 0)
