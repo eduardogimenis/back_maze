@@ -15,9 +15,9 @@ run/main_scene="uid://cmqc3loqtnir4"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
-[debug]
+[autoload]
 
-settings/stdout/print_fps=true
+GameState="*res://scripts/autoloads/game_state.gd"
 
 [input]
 
