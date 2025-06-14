@@ -35,6 +35,7 @@ func update_player_position(player_pos: Vector3):
 		# ...and if that new chunk actually exists in our world data...
 		if world_data.has(player_chunk_coord):
 			# ...then we update our tracker and emit the signal!
+			print("Player entered new chunk: ", player_chunk_coord, " | Direction: ", world_data[player_chunk_coord].cardinal_direction)
 			current_chunk_coord = player_chunk_coord
 			emit_signal("chunk_changed", world_data[current_chunk_coord])
 
