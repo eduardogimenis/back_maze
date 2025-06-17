@@ -1,4 +1,4 @@
-# res://scripts/main/Game.gd or testing_grounds.gd
+# res://scripts/main/testing_grounds.gd
 extends Node3D
 
 @onready var level_manager: Node3D = $LevelGenerator
@@ -7,7 +7,7 @@ extends Node3D
 
 func _ready():
 	# Connect the signal from the manager to the camera's function.
-	level_manager.chunk_changed.connect(camera_rig.set_cardinal_direction)
+	level_manager.player_entered_chunk.connect(camera_rig.on_player_entered_chunk)
 
 	# Generate the world
 	level_manager.generate_world()
