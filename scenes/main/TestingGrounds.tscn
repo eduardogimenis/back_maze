@@ -1,18 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://76uusa3fdqfj"]
+[gd_scene load_steps=6 format=3 uid="uid://76uusa3fdqfj"]
 
 [ext_resource type="PackedScene" uid="uid://mitbhflbpe8i" path="res://scenes/player/Player.tscn" id="1_c2k4f"]
 [ext_resource type="Script" uid="uid://dnempqyr4gya0" path="res://scenes/main/testing_grounds.gd" id="1_q537f"]
+[ext_resource type="PackedScene" uid="uid://0pd3fq7pexdm" path="res://scenes/ui/BlinkLayer.tscn" id="2_4yc6w"]
 [ext_resource type="PackedScene" uid="uid://bvifs7elyucu2" path="res://scenes/camera/CameraRig.tscn" id="2_54nuu"]
 [ext_resource type="PackedScene" uid="uid://jb67nnu14mf2" path="res://scenes/level/LevelGenerator.tscn" id="4_4yc6w"]
 
 [node name="TestingGrounds" type="Node3D"]
 script = ExtResource("1_q537f")
 
+[node name="CanvasLayer" parent="." instance=ExtResource("2_4yc6w")]
+
 [node name="Player" parent="." instance=ExtResource("1_c2k4f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62402, 0)
 
-[node name="CameraRig" parent="." instance=ExtResource("2_54nuu")]
+[node name="CameraRig" parent="." node_paths=PackedStringArray("blink_layer") instance=ExtResource("2_54nuu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.96995, 0.0202131)
+blink_layer = NodePath("../CanvasLayer")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, 0, 0, 0)
