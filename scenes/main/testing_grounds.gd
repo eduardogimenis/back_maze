@@ -6,13 +6,15 @@ extends Node3D
 @onready var camera_rig: Node3D = $CameraRig
 
 func _ready():
-	# Connect the signal from the manager to the camera's function.
-	level_manager.player_entered_chunk.connect(camera_rig.on_player_entered_chunk)
+	# --- FIX ---
+	# Connect the correct signal ('trail_direction_changed') from the LevelManager
+	# to the correct function ('on_trail_direction_changed') in the CameraRig.
+	level_manager.trail_direction_changed.connect(camera_rig.on_trail_direction_changed)
 
 	# Generate the world
 	level_manager.generate_world()
 	
-	# Place the player at the start
+	# Place the player at the start (this is overridden by generate_world, but good for testing)
 	player.global_position = Vector3(10, 1, 10)
 
 
