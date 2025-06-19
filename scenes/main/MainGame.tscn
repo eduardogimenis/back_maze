@@ -13,14 +13,14 @@ script = ExtResource("1_1m7h2")
 [node name="CanvasLayer" parent="." instance=ExtResource("2_hqo4d")]
 
 [node name="Player" parent="." instance=ExtResource("3_rjpi8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62402, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.79074, 0)
 
 [node name="CameraRig" parent="." node_paths=PackedStringArray("blink_layer") instance=ExtResource("4_4l81i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.96995, 0.0202131)
 blink_layer = NodePath("../CanvasLayer")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, 0, 0, 0)
+transform = Transform3D(0.766045, 0.45452, -0.45452, 0, 0.707107, 0.707107, 0.642788, -0.541675, 0.541675, 0, 0, 0)
 shadow_enabled = true
 
 [node name="LevelGenerator" parent="." node_paths=PackedStringArray("player") instance=ExtResource("5_cpjwa")]

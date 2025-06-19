@@ -54,7 +54,7 @@ func _update_stats():
 	
 	var minutes = int(total_seconds / 60)
 	var seconds = int(total_seconds) % 60
-	var time_string = "Time: %02d:%02d" % [minutes, seconds]
+	var time_string = "Time: %02d minutes & %02d seconds" % [minutes, seconds]
 	
 	stats_label.text = time_string
 

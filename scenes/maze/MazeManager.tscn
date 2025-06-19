@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://jb67nnu14mf2"]
 
 [ext_resource type="Script" uid="uid://c0r867a5fxfjs" path="res://scenes/maze/maze_manager.gd" id="1_8gbu3"]
-[ext_resource type="MeshLibrary" uid="uid://bo8dy4lcnrwjk" path="res://scenes/testing/meshlibs/maze_theme.meshlib" id="2_ot8dn"]
+[ext_resource type="MeshLibrary" uid="uid://dndfxli3fcfbl" path="res://scenes/testing/meshlibs/maze_theme.meshlib" id="2_ot8dn"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ot8dn"]
 
