@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bo1otv8romnjw"]
+[gd_scene load_steps=3 format=3 uid="uid://bo1otv8romnjw"]
 
 [ext_resource type="Script" uid="uid://jut12x43mdvh" path="res://scenes/ui/main_ui.gd" id="1_1h4gc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1h4gc"]
+font_size = 14
 
 [node name="MainUi" type="Control"]
 layout_mode = 3
@@ -16,6 +19,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.423529, 0.423529, 0.423529, 0.294118)
+
+[node name="UITint" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 116.0
+offset_top = 112.0
+offset_right = -110.0
+offset_bottom = -103.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.446777, 0.446777, 0.446777, 0.678431)
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
 anchors_preset = 15
@@ -38,9 +53,17 @@ size_flags_horizontal = 3
 [node name="CompassPanel" type="PanelContainer" parent="CanvasLayer/MarginContainer/MainColumns/LeftColumn"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/MainColumns/LeftColumn/CompassPanel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/MainColumns/LeftColumn/CompassPanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/MainColumns/LeftColumn/CompassPanel/VBoxContainer"]
 layout_mode = 2
 text = "COMPASS"
+
+[node name="Label2" type="Label" parent="CanvasLayer/MarginContainer/MainColumns/LeftColumn/CompassPanel/VBoxContainer"]
+layout_mode = 2
+text = "FACING:"
+label_settings = SubResource("LabelSettings_1h4gc")
 
 [node name="StatsPanel" type="PanelContainer" parent="CanvasLayer/MarginContainer/MainColumns/LeftColumn"]
 layout_mode = 2
@@ -51,6 +74,7 @@ text = "STATS"
 
 [node name="InventoryPanel" type="PanelContainer" parent="CanvasLayer/MarginContainer/MainColumns/LeftColumn"]
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="GridContainer" type="GridContainer" parent="CanvasLayer/MarginContainer/MainColumns/LeftColumn/InventoryPanel"]
 layout_mode = 2
@@ -136,14 +160,4 @@ text = "GAME STATS"
 layout_mode = 2
 text = "QUIT"
 
-[node name="UITint" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 116.0
-offset_top = 112.0
-offset_right = -110.0
-offset_bottom = -103.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.423529, 0.423529, 0.423529, 0.294118)
+[connection signal="pressed" from="CanvasLayer/MarginContainer/MainColumns/RightColumn/ControlsPanel/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
