@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://bryfiodoirb8q"]
+
+[ext_resource type="Texture2D" uid="uid://b6kttw4urbqe7" path="res://assets/texture/carpet/fabrics_0076_color_4k.jpg" id="1_u11n5"]
+[ext_resource type="Texture2D" uid="uid://e8ep4hu0ox2d" path="res://assets/texture/carpet/fabrics_0076_height_4k.png" id="2_vd36i"]
+[ext_resource type="Texture2D" uid="uid://bc5qw3v2oy8vu" path="res://assets/texture/carpet/fabrics_0076_normal_directx_4k.png" id="3_5wa41"]
+[ext_resource type="Texture2D" uid="uid://b20bmkptw8llv" path="res://assets/texture/carpet/fabrics_0076_roughness_4k.jpg" id="4_fa2hj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0rcnm"]
+albedo_color = Color(0.944488, 0.811561, 0.700667, 1)
+albedo_texture = ExtResource("1_u11n5")
+roughness_texture = ExtResource("4_fa2hj")
+normal_enabled = true
+normal_texture = ExtResource("3_5wa41")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_vd36i")
+
+[sub_resource type="BoxMesh" id="BoxMesh_unyac"]
+material = SubResource("StandardMaterial3D_0rcnm")
+size = Vector3(5, 0.1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2fc40"]
+size = Vector3(5, 0.1, 5)
+
+[node name="Floor" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000271797, 4.76837e-07, -0.0094173)
+mesh = SubResource("BoxMesh_unyac")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_2fc40")

@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://loumg25qdm5b"]
+
+[ext_resource type="Script" uid="uid://d4lej53xwtkrx" path="res://scripts/tools/trail_data_generator.gd" id="1_floxr"]
+[ext_resource type="PackedScene" uid="uid://bryfiodoirb8q" path="res://scenes/trail/trailTiles/Floor.tscn" id="2_d6i02"]
+[ext_resource type="PackedScene" uid="uid://dcdx1mqwiqn1b" path="res://scenes/trail/trailTiles/Wall.tscn" id="3_jvlnx"]
+
+[node name="TrailLong" type="Node3D"]
+script = ExtResource("1_floxr")
+resource_path = "res://scenes/testing/trails/"
+
+[node name="Floor3" parent="." instance=ExtResource("2_d6i02")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="Floor" parent="." instance=ExtResource("2_d6i02")]
+
+[node name="Floor2" parent="." instance=ExtResource("2_d6i02")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="Wall" parent="." instance=ExtResource("3_jvlnx")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 3)
+
+[node name="Wall2" parent="." instance=ExtResource("3_jvlnx")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0, -3)
+
+[node name="Wall3" parent="." instance=ExtResource("3_jvlnx")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 0, 3)
+
+[node name="Wall4" parent="." instance=ExtResource("3_jvlnx")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 10, 0, -3)

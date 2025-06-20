@@ -1,10 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bydpr2epkj7bu"]
+[gd_scene load_steps=3 format=3 uid="uid://bydpr2epkj7bu"]
 
 [ext_resource type="Script" uid="uid://d1ql6oul0bedc" path="res://scenes/testing/meshlibs/mesh_lib_tester.gd" id="1_8sxvf"]
-[ext_resource type="Script" uid="uid://b61mlrjif5lh8" path="res://scripts/meshlib_creation/meshlib_generator.gd" id="2_km82m"]
-[ext_resource type="PackedScene" uid="uid://mitbhflbpe8i" path="res://scenes/player/Player.tscn" id="3_8sxvf"]
-[ext_resource type="PackedScene" uid="uid://bvifs7elyucu2" path="res://scenes/camera/CameraRig.tscn" id="4_km82m"]
-[ext_resource type="PackedScene" uid="uid://dcdx1mqwiqn1b" path="res://scenes/level/levelTiles/Wall.tscn" id="5_niv1d"]
+[ext_resource type="Script" uid="uid://b61mlrjif5lh8" path="res://scripts/tools/meshlib_generator.gd" id="2_km82m"]
 
 [node name="MeshLibTester" type="Node3D"]
 script = ExtResource("1_8sxvf")
@@ -12,14 +9,3 @@ script = ExtResource("1_8sxvf")
 [node name="GeneratorNode" type="Node" parent="."]
 script = ExtResource("2_km82m")
 source_folder = "res://scenes/level/levelTiles"
-
-[node name="Player" parent="." instance=ExtResource("3_8sxvf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.76968, 5.16078, 0)
-
-[node name="CameraRig" parent="." instance=ExtResource("4_km82m")]
-
-[node name="Wall" parent="." instance=ExtResource("5_niv1d")]
-transform = Transform3D(5.26013, 0, 0, 0, 1, 0, 0, 0, 22.0975, 2.5761, -1.21823, 0)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 0, 0, 0)

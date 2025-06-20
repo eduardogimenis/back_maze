@@ -1,13 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://76uusa3fdqfj"]
+[gd_scene load_steps=6 format=3 uid="uid://76uusa3fdqfj"]
 
 [ext_resource type="Script" uid="uid://dnempqyr4gya0" path="res://scenes/main/MainGame.gd" id="1_1m7h2"]
 [ext_resource type="PackedScene" uid="uid://0pd3fq7pexdm" path="res://scenes/ui/BlinkLayer.tscn" id="2_hqo4d"]
 [ext_resource type="PackedScene" uid="uid://mitbhflbpe8i" path="res://scenes/player/Player.tscn" id="3_rjpi8"]
 [ext_resource type="PackedScene" uid="uid://bvifs7elyucu2" path="res://scenes/camera/CameraRig.tscn" id="4_4l81i"]
-[ext_resource type="PackedScene" uid="uid://jb67nnu14mf2" path="res://scenes/maze/MazeManager.tscn" id="5_cpjwa"]
 [ext_resource type="PackedScene" uid="uid://bo1otv8romnjw" path="res://scenes/ui/MainUI.tscn" id="6_id7je"]
 
-[node name="TestingGrounds" type="Node3D"]
+[node name="MainGame" type="Node3D"]
 script = ExtResource("1_1m7h2")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("2_hqo4d")]
@@ -15,15 +14,11 @@ script = ExtResource("1_1m7h2")
 [node name="Player" parent="." instance=ExtResource("3_rjpi8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.79074, 0)
 
-[node name="CameraRig" parent="." node_paths=PackedStringArray("blink_layer") instance=ExtResource("4_4l81i")]
+[node name="CameraRig" parent="." instance=ExtResource("4_4l81i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.96995, 0.0202131)
-blink_layer = NodePath("../CanvasLayer")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.766045, 0.45452, -0.45452, 0, 0.707107, 0.707107, 0.642788, -0.541675, 0.541675, 0, 0, 0)
 shadow_enabled = true
-
-[node name="LevelGenerator" parent="." node_paths=PackedStringArray("player") instance=ExtResource("5_cpjwa")]
-player = NodePath("../Player")
 
 [node name="MainUi" parent="." instance=ExtResource("6_id7je")]
