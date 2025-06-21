@@ -1,23 +1,23 @@
 [gd_scene load_steps=10 format=3 uid="uid://dcdx1mqwiqn1b"]
 
-[ext_resource type="Texture2D" uid="uid://lccj7v5j3lcs" path="res://assets/texture/wallpaper/paper_0033_color_4k.jpg" id="1_pa1b3"]
-[ext_resource type="Texture2D" uid="uid://crsurwicl1s8w" path="res://assets/texture/wallpaper/paper_0033_height_4k.png" id="2_w6g8q"]
-[ext_resource type="Texture2D" uid="uid://qengkq8vepsw" path="res://assets/texture/wallpaper/paper_0033_metallic_4k.jpg" id="3_s35ix"]
-[ext_resource type="Texture2D" uid="uid://d4jfvq2uuif3" path="res://assets/texture/wallpaper/paper_0033_normal_directx_4k.png" id="4_jof0h"]
-[ext_resource type="Texture2D" uid="uid://ciosfw7w2slyf" path="res://assets/texture/wallpaper/paper_0033_roughness_4k.jpg" id="5_8ak4h"]
+[ext_resource type="Texture2D" uid="uid://dxdkv644efb1v" path="res://assets/texture/wallpaper/paper_0033_color_2k.jpg" id="1_d6oia"]
+[ext_resource type="Texture2D" uid="uid://c4uni0uoplin" path="res://assets/texture/wallpaper/paper_0033_height_2k.png" id="2_pa1b3"]
+[ext_resource type="Texture2D" uid="uid://b6wehb8iunyhw" path="res://assets/texture/wallpaper/paper_0033_metallic_2k.jpg" id="3_w6g8q"]
+[ext_resource type="Texture2D" uid="uid://codbarm8vfnfd" path="res://assets/texture/wallpaper/paper_0033_normal_directx_2k.png" id="4_s35ix"]
+[ext_resource type="Texture2D" uid="uid://qmarxdf2sibn" path="res://assets/texture/wallpaper/paper_0033_roughness_2k.jpg" id="5_jof0h"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3g02n"]
-albedo_texture = ExtResource("1_pa1b3")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ak4h"]
+albedo_texture = ExtResource("1_d6oia")
 metallic = 1.0
-metallic_texture = ExtResource("3_s35ix")
-roughness_texture = ExtResource("5_8ak4h")
+metallic_texture = ExtResource("3_w6g8q")
+roughness_texture = ExtResource("5_jof0h")
 normal_enabled = true
-normal_texture = ExtResource("4_jof0h")
+normal_texture = ExtResource("4_s35ix")
 heightmap_enabled = true
-heightmap_texture = ExtResource("2_w6g8q")
+heightmap_texture = ExtResource("2_pa1b3")
 
 [sub_resource type="BoxMesh" id="BoxMesh_x0qwa"]
-material = SubResource("StandardMaterial3D_3g02n")
+material = SubResource("StandardMaterial3D_8ak4h")
 size = Vector3(1, 4, 5)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x0qwa"]

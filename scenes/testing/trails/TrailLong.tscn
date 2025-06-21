@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://loumg25qdm5b"]
+[gd_scene load_steps=6 format=3 uid="uid://loumg25qdm5b"]
 
 [ext_resource type="Script" uid="uid://d4lej53xwtkrx" path="res://scripts/tools/trail_data_generator.gd" id="1_floxr"]
 [ext_resource type="PackedScene" uid="uid://bryfiodoirb8q" path="res://scenes/trail/trailTiles/Floor.tscn" id="2_d6i02"]
 [ext_resource type="PackedScene" uid="uid://dcdx1mqwiqn1b" path="res://scenes/trail/trailTiles/Wall.tscn" id="3_jvlnx"]
+[ext_resource type="PackedScene" uid="uid://mitbhflbpe8i" path="res://scenes/player/Player.tscn" id="4_jvlnx"]
+[ext_resource type="PackedScene" uid="uid://bvifs7elyucu2" path="res://scenes/camera/CameraRig.tscn" id="5_20ycn"]
 
 [node name="TrailLong" type="Node3D"]
 script = ExtResource("1_floxr")
@@ -16,14 +18,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
 [node name="Floor2" parent="." instance=ExtResource("2_d6i02")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 
-[node name="Wall" parent="." instance=ExtResource("3_jvlnx")]
+[node name="right1" parent="." instance=ExtResource("3_jvlnx")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 3)
 
-[node name="Wall2" parent="." instance=ExtResource("3_jvlnx")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0, -3)
-
-[node name="Wall3" parent="." instance=ExtResource("3_jvlnx")]
+[node name="right2" parent="." instance=ExtResource("3_jvlnx")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 0, 3)
 
-[node name="Wall4" parent="." instance=ExtResource("3_jvlnx")]
+[node name="right3" parent="." instance=ExtResource("3_jvlnx")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 5, 0, 3)
+
+[node name="left1" parent="." instance=ExtResource("3_jvlnx")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 10, 0, -3)
+
+[node name="left2" parent="." instance=ExtResource("3_jvlnx")]
+transform = Transform3D(-2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 5, 0, -3)
+
+[node name="left3" parent="." instance=ExtResource("3_jvlnx")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0, -3)
+
+[node name="Player" parent="." instance=ExtResource("4_jvlnx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CameraRig" parent="." instance=ExtResource("5_20ycn")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.766044, 0.604023, -0.219846, 0, 0.34202, 0.939693, 0.642788, -0.719846, 0.262003, 0, 0, 0)
