@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cc5g6mscdn5tb"]
+
+[ext_resource type="PackedScene" uid="uid://bryfiodoirb8q" path="res://scenes/MazePieces/BuildingBlocks/Floor.tscn" id="1_mtqvp"]
+
+[node name="TwoByTwoFloor" type="Node3D"]
+
+[node name="Floor4" parent="." instance=ExtResource("1_mtqvp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 2.5)
+
+[node name="Floor3" parent="." instance=ExtResource("1_mtqvp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -2.5)
+
+[node name="Floor2" parent="." instance=ExtResource("1_mtqvp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 2.5)
+
+[node name="Floor" parent="." instance=ExtResource("1_mtqvp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -2.5)

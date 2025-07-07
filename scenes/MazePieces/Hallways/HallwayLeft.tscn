@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7nkris81titj"]
+
+[ext_resource type="PackedScene" uid="uid://dcdx1mqwiqn1b" path="res://scenes/MazePieces/BuildingBlocks/Wall.tscn" id="1_sgfd1"]
+[ext_resource type="PackedScene" uid="uid://loumg25qdm5b" path="res://scenes/MazePieces/Hallways/3LongHallway.tscn" id="2_ub2hq"]
+[ext_resource type="PackedScene" uid="uid://bryfiodoirb8q" path="res://scenes/MazePieces/BuildingBlocks/Floor.tscn" id="3_nb6k3"]
+
+[node name="HallwayRight" type="Node3D"]
+
+[node name="Wall2" parent="." instance=ExtResource("1_sgfd1")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.5, 0, 3)
+
+[node name="TrailLong2" parent="." instance=ExtResource("2_ub2hq")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 18.5, 0, -2.5)
+
+[node name="TrailLong" parent="." instance=ExtResource("2_ub2hq")]
+
+[node name="Wall" parent="." instance=ExtResource("1_sgfd1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, 0)
+
+[node name="Wall3" parent="." instance=ExtResource("1_sgfd1")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 19.5, -0.01, 3.001)
+
+[node name="Floor2" parent="." instance=ExtResource("3_nb6k3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, -0.001, 0)
+
+[node name="Floor" parent="." instance=ExtResource("3_nb6k3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 0)

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqevbj2r7rjk"]
+
+[ext_resource type="PackedScene" uid="uid://dcdx1mqwiqn1b" path="res://scenes/MazePieces/BuildingBlocks/Wall.tscn" id="1_f08xd"]
+[ext_resource type="PackedScene" uid="uid://bryfiodoirb8q" path="res://scenes/MazePieces/BuildingBlocks/Floor.tscn" id="2_bxeh3"]
+
+[node name="ConnectorWall" type="Node3D"]
+
+[node name="Wall" parent="." instance=ExtResource("1_f08xd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 7.5)
+
+[node name="Wall2" parent="." instance=ExtResource("1_f08xd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -7.5)
+
+[node name="Wall3" parent="." instance=ExtResource("1_f08xd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.501, -0.001, 5)
+
+[node name="Wall4" parent="." instance=ExtResource("1_f08xd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.501, -0.001, -5)
+
+[node name="Floor" parent="." instance=ExtResource("2_bxeh3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -0.001, 0)

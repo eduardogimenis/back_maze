@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckpy8j5cvwbmk"]
+
+[ext_resource type="PackedScene" uid="uid://dxqjk1su65iew" path="res://scenes/MazePieces/Floors/4x4.tscn" id="1_jumr0"]
+[ext_resource type="PackedScene" uid="uid://cqevbj2r7rjk" path="res://scenes/MazePieces/Wall/ConnectorWall.tscn" id="2_5p4v7"]
+
+[node name="FourWayConnector" type="Node3D"]
+
+[node name="FourByFourFloor" parent="." instance=ExtResource("1_jumr0")]
+
+[node name="ConnectorWall" parent="." instance=ExtResource("2_5p4v7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="ConnectorWall2" parent="." instance=ExtResource("2_5p4v7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 10, 0, 0)
+
+[node name="ConnectorWall3" parent="." instance=ExtResource("2_5p4v7")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 0, 0, 10)
+
+[node name="ConnectorWall4" parent="." instance=ExtResource("2_5p4v7")]
+transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, 0, 0, -10)
